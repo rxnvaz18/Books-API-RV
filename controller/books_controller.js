@@ -3,6 +3,7 @@ const books = express.Router()
 const Book = require('../models/book')
 
 // SEED route must be above all others
+
 books.get('/seed', (req, res) => {
     Book.insertMany([{
         "title": "The Shinobi Initiative",
@@ -39,6 +40,7 @@ books.get('/seed', (req, res) => {
             message: 'Seed unsuccessful'
         }))
 })
+
 
 // INDEX
 books.get('/', (req, res) => {
