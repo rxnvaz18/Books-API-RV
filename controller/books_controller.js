@@ -1,6 +1,7 @@
-const mongoose = require('mongoose')
-const { Schema } = mongoose
+const express = require('express')
+const books = express.Router()
+const Book = require('../models/book')
 
-require('Book')
 
-module.exports = booksController
+
+module.exports = books

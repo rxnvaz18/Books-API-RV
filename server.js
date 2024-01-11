@@ -15,13 +15,13 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 })
 
 // ROOT INDEX
-app.get('/', function (req, res) {
-  return res.send('Hello world')
+app.get('/', (req, res) => {
+  res.send('Hello world')
 })
 
 // BOOKS
-const booksController = 'require'('./controller/books_controller')
-app.use('/books, booksController')
+const booksController = require('./controller/books_controller')
+app.use('/books', booksController)
 
 // LISTEN
 app.listen(PORT, () => {
